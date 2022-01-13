@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대한투어</title>
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <script src="./script/jquery-1.12.3.js"></script>
+  <script>
+    $(document).ready(function () {
+      function moveSlide() {
+        $('.slide > ul').animate({'margin-top': '-300px'}, 500, function () {
+          $('.slide > ul > li:first-child').insertAfter('.slide > ul > li:last-child');
+          $('.slide > ul').css('margin-top', '0');
+        });
+      }
+      let Timer = setInterval(moveSlide, 3000);
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html" title="메인페이지 바로가기"><img src="./img/" alt="상단 로고"></a></h1>
+      
+      <ul>
+        <li>
+          <a href="#" title=""></a>
+          <ul>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title=""></a>
+          <ul>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title=""></a>
+          <ul>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title=""></a>
+          <ul>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+            <li><a href="#" title=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="slide">
+        <ul>
+          <li>
+            <h3>마카오 가족 여행</h3>
+            <a href="#" title="메인1"><img src="./img/main01.jpg" alt=""></a>
+          </li>
+          <li>
+            <h3>해돋이 기차여행</h3>
+            <a href="#" title="메인2"><img src="./img/main02.jpg" alt=""></a>
+          </li>
+          <li>
+            <h3>사계절 힐링 제주 온수풀</h3>
+            <a href="#" title="메인3"><img src="./img/main03.jpg" alt=""></a>
+          </li>
+        </ul>
+      </section>
+
+      <article class="notice"></article>
+      <article class="gallery"></article>
+      <article class="icon"></article>
+    </main>
+
+    <footer>
+      
+    </footer>
+  </div>
+</body>
+</html>
